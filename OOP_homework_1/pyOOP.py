@@ -15,7 +15,7 @@ class CoffeeMachine:
             self.__waste += 2 * coll
             self.water -= 10 * coll
             self.grains -= 5 * coll
-            print('Please your coffee')
+            print('Please your americano')
             return
         else:
             print('waste is full')
@@ -32,7 +32,7 @@ class CoffeeMachine:
             self.__waste += 5 * coll
             self.water -= 10 * coll
             self.grains -= 5 * coll
-            print('Please your coffee')
+            print('Please your espresso')
             return
         else:
             print('waste is full')
@@ -44,11 +44,11 @@ class CoffeeMachine:
 
     def add_water(self):
         self.water = 100
-        print('water is full')
+        print('water added')
 
     def add_grains(self):
         self.grains = 100
-        print('grains is full')
+        print('grains added')
 
     def coffee_to_child(self, coll):
         if (self.water - 10 * coll) <= 0:
