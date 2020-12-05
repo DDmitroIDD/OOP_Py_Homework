@@ -15,7 +15,7 @@ class CoffeeMachine:
             self.__waste += 2 * coll
             self.water -= 10 * coll
             self.grains -= 5 * coll
-            print('Please your americano')
+            print('Please your americano', end=' ')
             return True
         else:
             print('waste is full')
@@ -32,7 +32,7 @@ class CoffeeMachine:
             self.__waste += 5 * coll
             self.water -= 10 * coll
             self.grains -= 5 * coll
-            print('Please your espresso')
+            print('Please your espresso', end=' ')
             return True
         else:
             print('waste is full')
@@ -75,7 +75,7 @@ class CoffeeMachineWithMilk(CoffeeMachine):
             print('add milk')
             return False
         elif self.coffee_to_child(coll):
-            print('your cappuccino')
+            print('your cappuccino', end=' ')
             self.milk -= 5 * coll
             return True
 
@@ -84,7 +84,7 @@ class CoffeeMachineWithMilk(CoffeeMachine):
             print('add milk')
             return False
         elif self.coffee_to_child(coll):
-            print('your latte')
+            print('your latte', end=' ')
             self.milk -= 10 * coll
             return True
 
