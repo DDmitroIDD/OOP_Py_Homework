@@ -7,36 +7,36 @@ class CoffeeMachine:
     def make_americano(self, coll):
         if (self.water - 10 * coll) <= 0:
             print('add water please')
-            return
+            return False
         if (self.grains - 5 * coll) <= 0:
             print('add grains please')
-            return
+            return False
         if (self.__waste + 2 * coll) <= self.__limit_waste:
             self.__waste += 2 * coll
             self.water -= 10 * coll
             self.grains -= 5 * coll
             print('Please your americano')
-            return
+            return True
         else:
             print('waste is full')
-            return
+            return False
 
     def make_espresso(self, coll):
         if (self.water - 10 * coll) <= 0:
             print('add water please')
-            return
+            return False
         if (self.grains - 5 * coll) <= 0:
             print('add grains please')
-            return
+            return False
         if (self.__waste + 5 * coll) <= self.__limit_waste:
             self.__waste += 5 * coll
             self.water -= 10 * coll
             self.grains -= 5 * coll
             print('Please your espresso')
-            return
+            return True
         else:
             print('waste is full')
-            return
+            return False
 
     def clean_coffee(self):
         self.__waste = 0
@@ -86,7 +86,7 @@ class CoffeeMachineWithMilk(CoffeeMachine):
         elif self.coffee_to_child(coll):
             print('your latte')
             self.milk -= 10 * coll
-            return
+            return True
 
     def add_milk(self):
         self.milk = 50
